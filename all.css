@@ -13,3 +13,8 @@ table tr{
     background = color:#000;
     color: #fff;
 }
+
+div.show_image img{
+    width: 300px;
+    
+}

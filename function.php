@@ -419,4 +419,30 @@ function update_user($id,$username,$password,$name) // 新增文章
     
     return $result;
 }
+
+
+function get_all_work() //到資料庫抓取文章
+{
+   
+    $datas = array();
+    $sql = "SELECT * FROM article";
+    $query = mysqli_query($GLOBALS['link'],$sql);
+    //print_r($query);
+    if($query)
+      {
+        if(mysqli_num_rows($query)>0)
+        {
+            while($row = mysqli_fetch_assoc($query))
+            {
+                $datas[] = $row;
+            }
+        }
+    }
+    else
+    {
+        echo "{$sql}語法請求失敗:<br/>".mysqli_error($GLOBALS['link']);
+    }
+    
+    return $datas;
+}
 ?>

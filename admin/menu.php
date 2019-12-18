@@ -36,7 +36,7 @@ switch($file_name){
 <li role="presentation" ><a href="../First.php">前台首頁</a></li>
     <li role="presentation" <?php echo ($page_index == 0)?"class='active'":"";?>><a href="./">後台首頁</a></li>
 <li role="presentation" <?php echo ($page_index == 1)?"class='active'":"";?>><a href="article_list.php">所有文章</a></li>
-<li role="presentation"  <?php echo ($page_index == 2)?"class='active'":"";?>><a href="work.php">所有作品</a></li>
+<li role="presentation"  <?php echo ($page_index == 2)?"class='active'":"";?>><a href="work_list.php">所有作品</a></li>
 <li role="presentation"  <?php echo ($page_index == 3)?"class='active'":"";?>><a href="member_list.php">所有會員</a></li>
     <li role="presentation" ><a href="../php/logout.php">登出</a></li>
 </ul>
