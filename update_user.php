@@ -12,7 +12,7 @@ $check = update_user($_POST['id'],$_POST['un'],$_POST['pw'],$_POST['n']);
 if($check)
 {
     //帳號存在
-    echo 'yes';
+    echo true;
 }
 else
 {

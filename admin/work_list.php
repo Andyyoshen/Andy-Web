@@ -92,9 +92,9 @@ $datas = get_all_work();
                         dataType: 'html' //設定該網頁回應的會是 html 格式
                     }).done(function(data){
                         console.log(data);
-                        if(data == "yes")
+                        if(data == true)
                         {
-                            alert("刪除成功.點擊確認回到列表頁"); 
+                            alert("刪除成功"); 
                             //window.location.href = "article_list.php";
                              //this_tr.fadeOut();
                         }

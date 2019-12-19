@@ -266,27 +266,27 @@ $data = get_edit_work($_GET['i']);
                         'video_path'    : $("#video_path").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
                         'publish'   : $("input[name='publish']:checked").val()                                                                            
                         },
-                        dataType: 'html' //設定該網頁回應的會是 html 格式
+                        dataType: "html" //設定該網頁回應的會是 html 格式
                     }).done(function(data){
                             
                         //console.log(data);
-                        if(data == "yes")
+                        if(data == true)
                         {
                             console.log(data);
-                            alert("新增成功.點擊確認回到列表頁"); 
+                            alert("編輯成功.點擊確認回到列表頁"); 
                             window.location.href = "work_list.php";
                              
                         }
                         else
                         {
                               console.log(data);
-                            alert("新增失敗" + data); 
+                            alert("編輯失敗" + data); 
                         }
                         
                     }).fail(function(jqXHR,textStatus,errorThrom){
                         //失敗的時候
                         alert("有錯誤");
-                        console.lag(jqXHR.responseText);
+                        console.log(jqXHR.responseText);
                     });
                         
                     

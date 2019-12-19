@@ -12,7 +12,7 @@ $check = del_article($_POST['id']);
 if($check)
 {
     //帳號存在
-    echo 'yes';
+    echo true;
 }
 else
 {

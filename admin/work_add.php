@@ -261,7 +261,7 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
                         dataType: 'html' //設定該網頁回應的會是 html 格式
                     }).done(function(data){
                         console.log(data);
-                        if(data == 'yes')
+                        if(data == "YES")
                         {
                             alert("新增成功.點擊確認回到列表頁"); 
                             window.location.href = "work_list.php";

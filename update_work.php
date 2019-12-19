@@ -13,12 +13,12 @@ $check = update_work($_POST['id'],$_POST['intro'],$_POST['image_path'],$_POST['v
 if($check)
 {
     //帳號存在
-    echo 'yes';
+    echo true;
 }
 else
 {
     //echo $_POST['un'];
-    echo 'No';
+    echo 'NO';
 }
 
 ?>   

@@ -12,7 +12,7 @@ $check = update_article($_POST['id'],$_POST['title'],$_POST['category'],$_POST['
 if($check)
 {
     //帳號存在
-    echo 'yes';
+    echo true;
 }
 else
 {

@@ -101,7 +101,7 @@ $datas = get_edit_article($_GET["i"]);
                         dataType: 'html' //設定該網頁回應的會是 html 格式
                     }).done(function(data){
                         console.log(data);
-                        if(data == 'yes')
+                        if(data == true)
                         {
                             alert("更新成功.點擊確認回到列表頁"); 
                             window.location.href = "article_list.php";

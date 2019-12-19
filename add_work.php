@@ -12,7 +12,7 @@ $check = add_work($_POST['intro'],$_POST['image_path'],$_POST['video_path'],$_PO
 if($check)
 {
     //帳號存在
-    echo 'yes';
+    echo "YES";
 }
 else
 {

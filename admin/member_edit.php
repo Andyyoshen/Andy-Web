@@ -116,7 +116,7 @@ $datas = get_user($_GET['i']);
                 //console.log($(this).val());
             });
             
-           
+//---------------------------------更新帳號密碼-----------------------------------------
             
               //當表單送出去得時候 檢查密碼是否兩個都輸入正確
             $('#register_form').on("submit",function(){                   
@@ -138,7 +138,7 @@ $datas = get_user($_GET['i']);
                         dataType: 'html' //設定該網頁回應的會是 html 格式
                     }).done(function(data){
                         console.log(data);
-                        if(data == 'yes')
+                        if(data == true)
                         {
                             window.location.href = "member_list.php";
                              alert("更新成功"); 
