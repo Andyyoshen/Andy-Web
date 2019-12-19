@@ -21,6 +21,8 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+        
         <link rel="shortcut icon" href="../captain-america.png">
         <link rel="stylesheet" href="../all.css">
     </head>
@@ -173,6 +175,8 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
                     //console.log(form_data);
 
                 //var form_data = new FormData();  
+                    
+                    $("div.show_video").html('<i class="fa fa-spinner fa-spin"></i>');
 
                 $.ajax({
                     type : 'POST',
@@ -247,7 +251,7 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
                     {
                         $.ajax({
                         type : "POST", //表單傳送的方式 同 form 的method屬性
-                        url  : "../add_article.php", //目標給哪個檔案 同 form 的 action 屬性
+                        url  : "../add_work.php", //目標給哪個檔案 同 form 的 action 屬性
                         data : {//為要傳過去的資料 使用物件方式呈現 因為變數key值為英文的關係 所以用物件方式送 。 ex{name : "輸入的名子",password : "輸入的密碼"}
                         'intro'    : $("#intro").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
                         'image_path'    : $("#image_path").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
@@ -260,7 +264,7 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
                         if(data == 'yes')
                         {
                             alert("新增成功.點擊確認回到列表頁"); 
-                            window.location.href = "article_list.php";
+                            window.location.href = "work_list.php";
                              
                         }
                         else

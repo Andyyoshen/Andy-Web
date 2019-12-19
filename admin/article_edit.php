@@ -20,6 +20,7 @@ $datas = get_edit_article($_GET["i"]);
         <meta name="author" content="帥哥">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
 
         <link rel="shortcut icon" href="../captain-america.png">
         <link rel="stylesheet" href="../all.css">
@@ -102,14 +103,14 @@ $datas = get_edit_article($_GET["i"]);
                         console.log(data);
                         if(data == 'yes')
                         {
-                            alert("新增成功.點擊確認回到列表頁"); 
+                            alert("更新成功.點擊確認回到列表頁"); 
                             window.location.href = "article_list.php";
                              
                         }
                         else
                         {
-                            //console.lag('n');
-                            alert("新增失敗" + data); 
+                            console.log(data);
+                            alert("更新失敗" + data); 
                         }
                         
                     }).fail(function(jqXHR,textStatus,errorThrom){

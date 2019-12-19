@@ -255,7 +255,7 @@ function update_article($id,$title,$category,$content, $publish) // 新增文章
     SET `title` = '{$title}',
     `category` = '{$category}',
     `content` = '{$content}',
-    `publish` = $publish,
+    `publish` = '{$publish}',
     `modify_date` = '{$create_date}'
     WHERE `id` = $id";
     $query = mysqli_query($GLOBALS['link'],$sql);
@@ -425,7 +425,7 @@ function get_all_work() //到資料庫抓取文章
 {
    
     $datas = array();
-    $sql = "SELECT * FROM article";
+    $sql = "SELECT * FROM works";
     $query = mysqli_query($GLOBALS['link'],$sql);
     //print_r($query);
     if($query)
@@ -445,4 +445,194 @@ function get_all_work() //到資料庫抓取文章
     
     return $datas;
 }
+
+function add_work($intro,$image_path,$video_path, $publish) // 新增文章
+{
+   // echo $username,$password,$name;
+    $result = null;
+    
+    $upload_date = date("Y-m-d H:i:s");
+    //$create_user_id = $_SESSION['login_suer_id'];
+    
+    //$creater_id = $_SESSION['login_user_id'];
+    
+    
+    $image_path_value = "'{$image_path}'";
+    if($image_path == ''){
+        $image_path_value = "NULL";
+    }
+    
+     $video_path_value = "'{$video_path}'";
+    if($video_path == ''){
+        $video_path_value = "NULL";
+    }
+    
+
+    $sql = "INSERT INTO `works` 
+    (`intro`,
+    `image_path`,
+    `video_path`,
+    `publish`, 
+    `upload_date`) VALUES 
+    ('{$intro}',
+    {$image_path_value},
+    {$video_path_value},
+    '{$publish}',
+    '{$upload_date}')";
+    $query = mysqli_query($GLOBALS['link'],$sql);
+    //print_r($query);
+    if($query)
+      {
+        if(mysqli_affected_rows($GLOBALS['link'])==1)
+        {
+            $result = true;
+        }
+    }
+    else
+    {
+        echo "{$sql}語法請求失敗:<br/>".mysqli_error($GLOBALS['link']);
+    }
+    
+    return $result;
+}
+
+
+function get_edit_work($id)
+{
+   
+    $result = null;
+    $sql = "SELECT * FROM works WHERE id ={$id}";
+    $query = mysqli_query($GLOBALS['link'],$sql);
+    //print_r($query);
+    if($query)
+      {
+        if(mysqli_num_rows($query)==1)
+        {
+            $result = mysqli_fetch_assoc($query);
+        }
+    }
+    else
+    {
+        echo "{$sql}語法請求失敗:<br/>".mysqli_error($GLOBALS['link']);
+    }
+    
+    return $result;
+}
+
+function update_work($id,$intro,$image_path,$video_path, $publish) // 新增文章
+{
+   // echo $username,$password,$name;
+    $result = null;
+    
+    $create_date = date("Y-m-d H:i:s");
+    
+    //$creater_id = $_SESSION['login_user_id'];
+
+    $work = get_edit_work($id);
+    
+    // 如果,新傳入的圖片路經,跟舊得不一樣,那就要把舊的刪除
+    
+    if(file_exists($work['image_path']))
+    {
+        if($image_path != $work['image_path'])
+        {
+            unlink($work['image_path']);
+        }
+    }
+    
+    
+    // 如果,新傳入的影片片路經,跟舊得不一樣,那就要把舊的刪除
+    if(file_exists($work['video_path']))
+    {
+        if($image_path != $work['video_path'])
+        {
+            unlink($work['video_path']);
+        }
+    }
+    
+    
+    $image_path_sql = "`image_path` = '{$image_path}',";
+    if($image_path == ''){
+        $image_path_sql = '`image_path` = NULL,';
+    }
+    
+      $video_path_sql = "`video_path` = '{$video_path}',";
+    if($video_path == ''){
+        $video_path_sql = '`video_path` = NULL,';
+    }
+    
+    
+    $sql = "UPDATE `works` 
+    SET `intro` = '{$intro}',
+    {$image_path_sql}
+    {$video_path_sql}
+    `publish` = $publish
+    WHERE `id` = $id";
+    $query = mysqli_query($GLOBALS['link'],$sql);
+    //print_r($query);
+    if($query)
+      {
+        if(mysqli_affected_rows($GLOBALS['link'])==1)
+        {
+            $result = true;
+        }
+    }
+    else
+    {
+        echo "{$sql}語法請求失敗:<br/>".mysqli_error($GLOBALS['link']);
+    }
+    
+    return $result;
+}
+
+
+function del_work($id) // 刪除文章
+{
+   // echo $username,$password,$name;
+    $result = null;
+    
+    //$create_date = date("Y-m-d H:i:s");
+    
+    
+    
+     $work = get_edit_work($id);
+    
+    // 如果,新傳入的圖片路經,跟舊得不一樣,那就要把舊的刪除
+    
+    if(file_exists($work['image_path']))
+    {
+        
+            unlink($work['image_path']);
+        
+    }
+    
+    
+    // 如果,新傳入的影片片路經,跟舊得不一樣,那就要把舊的刪除
+    if(file_exists($work['video_path']))
+    {
+        
+            unlink($work['video_path']);
+        
+    }
+    //$creater_id = $_SESSION['login_user_id'];
+
+    $sql = "DELETE FROM `works`   
+    WHERE `id` = $id";
+    $query = mysqli_query($GLOBALS['link'],$sql);
+    //print_r($query);
+    if($query)
+      {
+        if(mysqli_affected_rows($GLOBALS['link'])==1)
+        {
+            $result = true;
+        }
+    }
+    else
+    {
+        echo "{$sql}語法請求失敗:<br/>".mysqli_error($GLOBALS['link']);
+    }
+    
+    return $result;
+}
+
 ?>

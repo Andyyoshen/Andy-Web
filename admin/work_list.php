@@ -77,7 +77,7 @@ $datas = get_all_work();
         $(document).on("ready",function(){
              // 當帳號輸入後 檢查帳號是否重複
             
-            $("a.del_article").on("click",function(){
+            $("a.del_work").on("click",function(){
                 var c = confirm("妳確定要刪除嗎");
                     this_tr = $(this).parent().parent();
             
