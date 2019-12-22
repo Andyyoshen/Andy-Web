@@ -20,15 +20,64 @@ $data = get_edit_work($_GET['i']);
         <meta name="author" content="帥哥">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
         
         <link rel="shortcut icon" href="../captain-america.png">
         <link rel="stylesheet" href="../all.css">
     </head>
-<!--    <link rel="stylesheet" href="../all.css">-->
+   <!--<link rel="stylesheet" href="../all.css">-->
     <body>
        <?php include_once 'menu.php';?>
+        
+ 
+        
+     <div class="container">
+  <!--<h2>Activate Modal with JavaScript</h2>-->
+  <!-- Trigger the modal with a button -->
+  <!--<button type="button" class="btn btn-info btn-lg" id="myBtn">Open Modal</button>-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">注意!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>你確定要刪除嗎?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>   
+        
+        
+        
+        
+        
+        
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
          <div class="main">
           <div class="container">
             <div class="row add_btn_area">
@@ -86,9 +135,13 @@ $data = get_edit_work($_GET['i']);
         
 <!-------------------------------以下為資料存檔----------------------------------------->
         
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+        
+ 
         <script>
             
+                    
+                                                      
         $(document).on("ready",function(){          
             
             $("input.image").on("change",function(){
@@ -136,7 +189,13 @@ $data = get_edit_work($_GET['i']);
             $("a.del_image").on("click", function(){
             var c = confirm("妳確定要刪除嗎");
                 
+            
+            //var c = $("#myModal").modal();
+           
                 
+                
+                
+              //var c = $("#myModal").modal();
             if($("#image_path").val() != '')
             {
                     

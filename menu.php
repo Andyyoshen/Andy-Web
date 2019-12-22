@@ -28,7 +28,8 @@ switch($file_name){
 ?>
 
 <div class="top">
-    <div class="jumbotron">
+    <link rel="stylesheet" href="all.css">
+    <div id="my-color" class="jumbotron" style="background-color:bisque">
         <div class="container">
             <div class="row">
                 <div class="co-xs-12">
@@ -40,6 +41,7 @@ switch($file_name){
 <li role="presentation"  <?php echo ($page_index == 3)?"class='active'":"";?>><a href="about.php">關於我們</a></li>
 <li role="presentation" <?php echo ($page_index == 4)?"class='active'":"";?>><a href="register.php">註冊</a></li>
 </ul>
+                    
                 </div>
              </div>
         </div>
