@@ -28,7 +28,7 @@ $xx = get_publicsh_work();
                   <div class="co-xs-12 col-sm-4">
                     <div class="thumbnail">
                     <?php if($a_work['image_path']):?>
-                    <img name="a" id="myImg" src="<?php echo $a_work['image_path'];?>" alt="Snow" style="width:100%;max-width:300px">
+                    <img name="a" id="myImg" src="<?php echo $a_work['image_path'];?>" alt="Snow" style="width:100%;max-width:300px" >
             <!--下面的include'image_html.php'檔的功能是要讓圖片變大(參考w3school)-->
                         <?php //include_once 'image_html.php';?> 
                         <?php else:?>
@@ -55,6 +55,12 @@ $xx = get_publicsh_work();
          </div>
         <?php include_once 'image_html.php';?> 
          <?php include_once 'footer.php';?>
-    
+    <style>
+        #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+    </style>    
     </body>
 </html>

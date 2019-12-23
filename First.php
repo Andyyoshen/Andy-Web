@@ -14,6 +14,7 @@
     </head>
     <link rel="stylesheet" href="all.css">
     <body>
+        
        <?php include_once 'menu.php';?>
          <div class="main">
           <div class="container">
@@ -24,8 +25,10 @@
               </div>
              </div>
            </div>
+             <?php include_once 'slide_show.php';?>
          </div>        
          <?php include_once 'footer.php';?>
-    
+        <?php //include_once 'slide_show.php';?>
     </body>
+    <?php //include_once 'slide_show.php';?>
 </html>
