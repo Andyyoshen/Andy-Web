@@ -1,5 +1,8 @@
-
-
+<?php
+require_once 'Listdb.inc.php';
+require_once 'function.php';
+$xx = get_publicsh_work();
+?>
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -21,19 +24,19 @@
     </ol>
 
     <!-- Wrapper for slides -->
+      
     <div class="carousel-inner">
-      <div class="item active">
-        <img src="2.jpg" alt="Los Angeles" style="width:100%;">
+        <?php foreach($xx as $a_work):?>
+      <div id="b" class="item">
+        <img src="<?php echo $a_work['image_path'];?>" alt="a" style="width:100%;">
       </div>
-
-      <div class="item">
-        <img src="basketball2.jpg" alt="Chicago" style="width:100%;">
-      </div>
-    
-      <div class="item">
-        <img src="1.jpg" alt="New york" style="width:100%;">
-      </div>
+      <?php endforeach;?>
     </div>
+           <?php// endforeach;?>
+      
+
+      
+   
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -53,11 +56,15 @@
 	interval: 1000
 	 });
 	});
+    $(document).on("ready",function(){
+        $("#b").addClass("item active")
+        
+    })
 </script>
     <style>
 .carousel .carousel-inner {
     height: 250px;
-    position: absolute;
+    position: absolute;     /*往中間調*/
     top: -50px;
       
 }

@@ -1,18 +1,18 @@
 .main{
     min-height: 590px;
 }
-.panel-primary .panel-heading a{
+/*.panel-primary .panel-heading a{
     color:#fff;
-}
+}*/
 
 div.add_btn_area{
     padding-bottom: 20px;
 }
 
-table tr{ 
+/*table tr{ 
     background = color:#000;
-    color: #fff;
-}
+    color:white;
+}*/
 
 div.show_image img{
     width: 300px;

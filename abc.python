@@ -1,0 +1,19 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+
+html = requests.get("http://www.ursalary0.com/")
+
+html.encoding = 'utf-8'
+#rint(html.text)
+sp = BeautifulSoup(html.text,"html.parser")
+#list1 = sp.find_all(href = re.compile("elsie"))
+list2 = sp.find_all("td","box_content_style")
+list3 = sp.find_all("a")
+#print(list3)
+#print(list3[11].text)
+a=['wert','wrt','sdfg','wgdfgt','afa']
+for c in range(11,70):
+#   #print(1)
+   for t in list3[c]:
+    print(t)

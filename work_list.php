@@ -21,7 +21,7 @@ $xx = get_work($_GET['i']);
 
         <link rel="shortcut icon" href="captain-america.png">
     </head>
-    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" type='text/css' href="all.css">
     <body>
         <?php include_once 'menu.php';?>
          <div class="main">

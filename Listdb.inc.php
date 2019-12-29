@@ -7,7 +7,7 @@
 
 $host = 'localhost';
 $dbuser = 'root';
-$dbpw = '';
+$dbpw = '123456';
 $dbname = 'login';
 //$datas = array();
 $GLOBALS['link']= mysqli_connect($host,$dbuser,$dbpw,$dbname);
