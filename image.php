@@ -1,7 +1,7 @@
 <html>
 <body>
 <img id="myImg" src="basketball2.jpg" alt="Snow" style="width:100%;max-width:300px">
-<img id="myImg" src="captain-america.png" alt="Snow" style="width:100%;max-width:300px">
+<img id="myImg" src="captain-america.png" alt="Snow" style="width:100%;max-width:300px;">
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">

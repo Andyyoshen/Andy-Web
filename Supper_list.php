@@ -35,7 +35,7 @@ $ss = get_publicsh_article();
                   <?php //echo $article['id'];?>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <a href='Supper.php?i=<?php echo $article['id'];?>'><?php echo $article['title'];?>
+                            <a href='Supper.php?i=<?php echo $article['id'];?>' style="color:black;font-weight:bold;text-decoration:underline;"><?php echo $article['title'];?>
                                 <?//php echo $_Get['i'];?>
                             </a>
                         </div>

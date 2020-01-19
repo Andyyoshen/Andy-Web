@@ -91,6 +91,7 @@ $datas = get_all_member();
                         if(data == true)
                         {
                             alert("刪除成功.點擊確認回到列表頁"); 
+                            this_tr.fadeOut();
                             //window.location.href = "article_list.php";
                              //this_tr.fadeOut();
                         }

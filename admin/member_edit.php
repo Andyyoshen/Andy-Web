@@ -47,9 +47,9 @@ $datas = get_user($_GET['i']);
                     <label for="password" class="col-sm-4 control-label">密碼</label>
                     </div>
                     <div class="col-sm-8">
-                      <input type="password" class="form-control"  name="password" id="password" placeholder="請輸入密碼" >
+                      <input type="password" class="form-control"  name="password" id="password" placeholder="請輸入密碼" style="width:750px;position: absolute;top:-30px;left:405px">
                     </div>
-                  </div>
+                  </div>    
                                 
                   <div class="form-group">
                     <label for="name" class="col-sm-4 control-label">暱稱</label>

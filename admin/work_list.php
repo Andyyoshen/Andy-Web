@@ -95,6 +95,7 @@ $datas = get_all_work();
                         if(data == true)
                         {
                             alert("刪除成功"); 
+                           this_tr.fadeOut();
                             //window.location.href = "article_list.php";
                              //this_tr.fadeOut();
                         }

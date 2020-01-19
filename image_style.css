@@ -1,7 +1,7 @@
 
 #myImg {
   border-radius: 5px;
-  cursor:all-scroll;
+  cursor:pointer;
   transition: 0.3s;
 }
 

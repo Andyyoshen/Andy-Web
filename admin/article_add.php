@@ -93,7 +93,7 @@ if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
                         'title'    : $("#title").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
                         'category'    : $("#category").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
                         'content'    : $("#content").val(), //代表要傳一個 n 變數值為 username 文字方塊裡的值
-                        'publish'   : $("input[name='publish']:checked").val()   
+                        'publish'   : $("input[name='publish']:checked").val() //這邊的值為html標籤的值  
                         },
                         dataType: 'html' //設定該網頁回應的會是 html 格式
                     }).done(function(data){

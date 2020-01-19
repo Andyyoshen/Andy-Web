@@ -30,7 +30,7 @@ $xx = get_publicsh_work();
                   <div class="co-xs-12 col-sm-4">
                     <div class="thumbnail">
                     <?php if($a_work['image_path']):?>
-                    <img name="a" id="myImg" src="<?php echo $a_work['image_path'];?>" alt="Snow" style="width:100%;max-width:300px" >
+                    <img name="a" id="myImg" src="<?php echo $a_work['image_path'];?>" alt="Snow" style="width:100%;max-width:300px;cursor:pointer;" >
             <!--下面的include'image_html.php'檔的功能是要讓圖片變大(參考w3school)-->
                         <?php else:?>                       
                         <div class="embed-responsive embed-responsive-16by9">

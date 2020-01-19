@@ -40,6 +40,7 @@ switch($file_name){
 <li role="presentation"  <?php echo ($page_index == 2)?"class='active'":"";?>><a href="work.php">所有作品</a></li>
 <li role="presentation"  <?php echo ($page_index == 3)?"class='active'":"";?>><a href="about.php">關於我們</a></li>
 <li role="presentation" <?php echo ($page_index == 4)?"class='active'":"";?>><a href="register.php">註冊</a></li>
+<li role="presentation" <?php echo ($page_index == 5)?"class='active'":"";?>><a href="admin/login.php">會員登入</a></li>
 </ul>
                     
                 </div>

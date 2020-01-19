@@ -26,18 +26,19 @@ if(isset($_SESSION['is_log']) && $_SESSION['is_log']){
           <div class="container">
             <div class="row">
               <div class="co-xs-12 col-sm-6 col-sm-offset-3 thumbnail">
-                  <h1>會員登入</h1>
+                  <h1 >會員登入</h1>
                 <form class="form-horizontal"  id="login_form" method="get" action="php/add_member.php">
                   <div class="form-group">
                     <label for="username" class="col-sm-4 control-label">帳號</label>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8" >
                       <input type="text" class="form-control" name="username" id="username" placeholder="請輸入帳號" required>
                     </div>
                     <div class="form-group">
                     <label for="password" class="col-sm-4 control-label">密碼</label>
                     </div>
                     <div class="col-sm-8">
-                      <input type="password" class="form-control"  name="password" id="password" placeholder="請輸入密碼" required>
+                      <input type="password" style=" width:375px;position: absolute;top: -35px;
+  left: 215px;" class="form-control"  name="password" id="password" placeholder="請輸入密碼" required>
                     </div>
                   </div>
                                     
