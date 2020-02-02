@@ -4,7 +4,6 @@
    // { 
        @ session_start(); 
     //} 
-
 $host = 'localhost';
 $dbuser = 'root';
 $dbpw = '123456';

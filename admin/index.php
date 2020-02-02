@@ -1,6 +1,6 @@
 <?php
 require_once '../Listdb.inc.php';
-print_r($_SESSION);
+//print_r($_SESSION);
 if(!isset($_SESSION['is_login']) || !$_SESSION['is_login']){
     header("Location: login.php");
 }

@@ -1,6 +1,9 @@
 <?php
+
 require_once '../Listdb.inc.php';
-print_r($_SESSION);
+
+//print_r($_SESSION);
+
 if(isset($_SESSION['is_log']) && $_SESSION['is_log']){
     header("Location: index.php");
 }
@@ -21,7 +24,6 @@ if(isset($_SESSION['is_log']) && $_SESSION['is_log']){
     </head>
     <link rel="stylesheet" href="../all.css">
     <body>
-       
          <div class="main">
           <div class="container">
             <div class="row">
