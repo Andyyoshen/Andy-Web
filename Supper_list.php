@@ -30,12 +30,12 @@ $ss = get_publicsh_article();
                     <?php
                         //$abstract = strip_tags($article['content']);
                         $article['content']= substr($article['content'],0,100);
-                  
+                    
                     ?>
                   <?php //echo $article['id'];?>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <a href='Supper.php?i=<?php echo $article['id'];?>' style="color:black;font-weight:bold;text-decoration:underline;"><?php echo $article['title'];?>
+                    <div class="panel panel-primary" id="aa">
+                        <div class="panel-heading" >
+                            <a class="bb" href='Supper.php?i=<?php echo $article['id'];?>' style="color:black;font-weight:bold;text-decoration:underline;"><?php echo $article['title'];?>
                                 <?//php echo $_Get['i'];?>
                             </a>
                         </div>
@@ -52,9 +52,29 @@ $ss = get_publicsh_article();
                   <?php endif;?>
               </div>
              </div>
+             <a class="ccc"></a>
            </div>
          </div>        
          <?php include_once 'footer.php';?>
-    
+    <script>
+     $(document).on('ready',function(){
+        $(".panel").mouseenter(function(){
+            $(this).find('.bb').css('color','red');
+            //this.css('color','red');
+        //    console.log($(this));
+        //    console.log($("#aa"));
+        //    console.log($("#bb"));
+        //console.log($(this).css('color','red'));
+        //console.log($(this).find('.bb'));
+        });
+        $(".panel").mouseleave(function(){
+           $(this).find('.bb').css('color', 'black');
+        })
+        // $("#aa").mouseleave(function(){
+        //    $("#bb").css('color', 'black');
+        // })
+     });
+    </script>
     </body>
+    
 </html>

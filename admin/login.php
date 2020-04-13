@@ -40,11 +40,9 @@ if(isset($_SESSION['is_log']) && $_SESSION['is_log']){
                     </div>
                     <div class="col-sm-8">
                       <input type="password" style=" width:375px;position: absolute;top: -35px;
-  left: 215px;" class="form-control"  name="password" id="password" placeholder="請輸入密碼" required>
+                      left: 215px;" class="form-control"  name="password" id="password" placeholder="請輸入密碼" required>
                     </div>
-                  </div>
-                                    
-                 
+                  </div>                                    
                   <div class="form-group">
                     <div class="co-xs-12 text-center">
                       <button type="submit" class="btn btn-default">登入</button>
@@ -56,13 +54,44 @@ if(isset($_SESSION['is_log']) && $_SESSION['is_log']){
            </div>
          </div>        
          <?php include_once 'footer.php';?>
-    
+        <button id="btdiolog">暗我</button>
+<!-------------------------------------diolog會員新增-------------------------------->
+<div class="modal" tabindex="-1" role="dialog" id="mymodal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">會員登入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <label>帳號:</label>
+          <div class="form-group">
+              <input type="text" class="form-control">
+          </div>
+          <label>密碼:</label>
+          <div class="form-group">
+              <input type="text" class="form-control">
+          </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------會員登入------------------------------------->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>
         $(document).on("ready",function(){
              // 當帳號輸入後 檢查帳號是否重複
             
-            
+            $("#btdiolog").on("click",function(){
+               $("#mymodal").show("modal");
+            });
            
             
               //當表單送出去得時候 檢查密碼是否兩個都輸入正確

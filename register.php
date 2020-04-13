@@ -54,11 +54,15 @@
              </div>
            </div>
          </div>        
+        <button id="btdiolog">暗我</button>
          <?php include_once 'footer.php';?>
-    
+
+<!-----------------------------------------會員登入---------------------------------->
+        
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>
         $(document).on("ready",function(){
+           
              // 當帳號輸入後 檢查帳號是否重複
             $("#username").on("keyup",function(){
                 if($(this).val()!='')

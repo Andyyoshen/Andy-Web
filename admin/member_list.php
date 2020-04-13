@@ -64,14 +64,48 @@ $datas = get_all_member();
                   </div>
               </div>
            </div>
-         </div>        
-         <?php include_once 'footer.php';?>
+         </div> 
+        <button id="btdiolog">me</button>
+        <?php include_once 'footer.php';?>
+       
+ <!--------------------------------------以下為dialog---------------------------------->       
+<div class="modal" tabindex="-1" role="dialog" id="mymodal" >
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
+        
+        
+         
 <!--------------------------------------以下為刪除資料---------------------------------->
         
      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script>
+       
         $(document).on("ready",function(){
-             // 當帳號輸入後 檢查帳號是否重複
+             // 當帳號輸入後 檢查帳號是否重複           
+            $("#btdiolog").on("click",function(){
+                
+               $("#mymodal").show('modal');
+                
+            });
+            
             
             $("a.del_member").on("click",function(){
                 var c = confirm("妳確定要刪除嗎");
